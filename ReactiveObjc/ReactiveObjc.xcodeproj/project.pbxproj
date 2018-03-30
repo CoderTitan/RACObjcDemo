@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7739A1E12063D24F0099F34A /* RACHighViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7739A1E02063D24F0099F34A /* RACHighViewController.xib */; };
 		77649846202AF41800D2596E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77649845202AF41800D2596E /* AppDelegate.m */; };
 		77649849202AF41800D2596E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77649848202AF41800D2596E /* ViewController.m */; };
 		7764984C202AF41800D2596E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7764984A202AF41800D2596E /* Main.storyboard */; };
@@ -14,11 +15,17 @@
 		77649851202AF41900D2596E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77649850202AF41900D2596E /* Assets.xcassets */; };
 		77649854202AF41900D2596E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77649852202AF41900D2596E /* LaunchScreen.storyboard */; };
 		77649857202AF41900D2596E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77649856202AF41900D2596E /* main.m */; };
+		778C838320635C1600B1AB33 /* RACHighViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778C838220635C1600B1AB33 /* RACHighViewController.m */; };
+		77A763C4205FB7DB00B2C8E8 /* SequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A763C3205FB7DB00B2C8E8 /* SequenceViewController.m */; };
+		77D917FF205D43DD001FEDFD /* SingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D917FE205D43DD001FEDFD /* SingleViewController.m */; };
+		77D91802205D4465001FEDFD /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D91801205D4465001FEDFD /* SubjectViewController.m */; };
+		77D91805205D44E3001FEDFD /* SubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D91804205D44E3001FEDFD /* SubjectView.m */; };
 		C035278045BBE1DA910782CD /* libPods-ReactiveObjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7CF7685D740D218E9B24E1 /* libPods-ReactiveObjc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F95C35B4AA0E1F64E6A49A4 /* Pods-ReactiveObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveObjc/Pods-ReactiveObjc.release.xcconfig"; sourceTree = "<group>"; };
+		7739A1E02063D24F0099F34A /* RACHighViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RACHighViewController.xib; sourceTree = "<group>"; };
 		77649841202AF41800D2596E /* ReactiveObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77649844202AF41800D2596E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77649845202AF41800D2596E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,6 +37,16 @@
 		77649853202AF41900D2596E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77649855202AF41900D2596E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77649856202AF41900D2596E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		778C838120635C1600B1AB33 /* RACHighViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACHighViewController.h; sourceTree = "<group>"; };
+		778C838220635C1600B1AB33 /* RACHighViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACHighViewController.m; sourceTree = "<group>"; };
+		77A763C2205FB7DB00B2C8E8 /* SequenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequenceViewController.h; sourceTree = "<group>"; };
+		77A763C3205FB7DB00B2C8E8 /* SequenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceViewController.m; sourceTree = "<group>"; };
+		77D917FD205D43DD001FEDFD /* SingleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleViewController.h; sourceTree = "<group>"; };
+		77D917FE205D43DD001FEDFD /* SingleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleViewController.m; sourceTree = "<group>"; };
+		77D91800205D4465001FEDFD /* SubjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectViewController.h; sourceTree = "<group>"; };
+		77D91801205D4465001FEDFD /* SubjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectViewController.m; sourceTree = "<group>"; };
+		77D91803205D44E3001FEDFD /* SubjectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectView.h; sourceTree = "<group>"; };
+		77D91804205D44E3001FEDFD /* SubjectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectView.m; sourceTree = "<group>"; };
 		8E7CF7685D740D218E9B24E1 /* libPods-ReactiveObjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveObjc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB49AF915C72A09DDA1DDEB0 /* Pods-ReactiveObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveObjc/Pods-ReactiveObjc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +66,10 @@
 		77649838202AF41800D2596E = {
 			isa = PBXGroup;
 			children = (
+				778C838020635BB700B1AB33 /* RAC高级用法 */,
+				77A763C1205FB7C700B2C8E8 /* RACSequence */,
+				77D917FB205D43CE001FEDFD /* RACSingle */,
+				77D917FC205D43CE001FEDFD /* RACSubject */,
 				77649843202AF41800D2596E /* ReactiveObjc */,
 				77649842202AF41800D2596E /* Products */,
 				868789A5D939A36A0284FE04 /* Pods */,
@@ -79,6 +100,45 @@
 				7764984D202AF41900D2596E /* ReactiveObjc.xcdatamodeld */,
 			);
 			path = ReactiveObjc;
+			sourceTree = "<group>";
+		};
+		778C838020635BB700B1AB33 /* RAC高级用法 */ = {
+			isa = PBXGroup;
+			children = (
+				778C838120635C1600B1AB33 /* RACHighViewController.h */,
+				778C838220635C1600B1AB33 /* RACHighViewController.m */,
+				7739A1E02063D24F0099F34A /* RACHighViewController.xib */,
+			);
+			path = "RAC高级用法";
+			sourceTree = "<group>";
+		};
+		77A763C1205FB7C700B2C8E8 /* RACSequence */ = {
+			isa = PBXGroup;
+			children = (
+				77A763C2205FB7DB00B2C8E8 /* SequenceViewController.h */,
+				77A763C3205FB7DB00B2C8E8 /* SequenceViewController.m */,
+			);
+			path = RACSequence;
+			sourceTree = "<group>";
+		};
+		77D917FB205D43CE001FEDFD /* RACSingle */ = {
+			isa = PBXGroup;
+			children = (
+				77D917FD205D43DD001FEDFD /* SingleViewController.h */,
+				77D917FE205D43DD001FEDFD /* SingleViewController.m */,
+			);
+			path = RACSingle;
+			sourceTree = "<group>";
+		};
+		77D917FC205D43CE001FEDFD /* RACSubject */ = {
+			isa = PBXGroup;
+			children = (
+				77D91800205D4465001FEDFD /* SubjectViewController.h */,
+				77D91801205D4465001FEDFD /* SubjectViewController.m */,
+				77D91803205D44E3001FEDFD /* SubjectView.h */,
+				77D91804205D44E3001FEDFD /* SubjectView.m */,
+			);
+			path = RACSubject;
 			sourceTree = "<group>";
 		};
 		868789A5D939A36A0284FE04 /* Pods */ = {
@@ -162,6 +222,7 @@
 				77649854202AF41900D2596E /* LaunchScreen.storyboard in Resources */,
 				77649851202AF41900D2596E /* Assets.xcassets in Resources */,
 				7764984C202AF41800D2596E /* Main.storyboard in Resources */,
+				7739A1E12063D24F0099F34A /* RACHighViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,10 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D91805205D44E3001FEDFD /* SubjectView.m in Sources */,
 				7764984F202AF41900D2596E /* ReactiveObjc.xcdatamodeld in Sources */,
 				77649849202AF41800D2596E /* ViewController.m in Sources */,
+				778C838320635C1600B1AB33 /* RACHighViewController.m in Sources */,
+				77A763C4205FB7DB00B2C8E8 /* SequenceViewController.m in Sources */,
+				77D917FF205D43DD001FEDFD /* SingleViewController.m in Sources */,
 				77649857202AF41900D2596E /* main.m in Sources */,
 				77649846202AF41800D2596E /* AppDelegate.m in Sources */,
+				77D91802205D4465001FEDFD /* SubjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

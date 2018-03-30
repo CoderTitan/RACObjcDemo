@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RACHighViewController">
+            <connections>
+                <outlet property="accountText" destination="pXV-Hl-xIH" id="tne-Gk-J5D"/>
+                <outlet property="loginButton" destination="MBG-Lc-Up1" id="GkR-Kc-5X4"/>
+                <outlet property="passwordText" destination="0C3-xP-qzC" id="sC5-HM-uPd"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6eV-qq-kgI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXV-Hl-xIH">
+                    <rect key="frame" x="30" y="120" width="315" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0C3-xP-qzC">
+                    <rect key="frame" x="30" y="172" width="315" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBG-Lc-Up1">
+                    <rect key="frame" x="40" y="252" width="295" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="hWs-e1-0Kr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0C3-xP-qzC" firstAttribute="leading" secondItem="pXV-Hl-xIH" secondAttribute="leading" id="9Pr-Dg-wBa"/>
+                <constraint firstItem="pXV-Hl-xIH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="BgS-0z-zOx"/>
+                <constraint firstItem="0C3-xP-qzC" firstAttribute="height" secondItem="pXV-Hl-xIH" secondAttribute="height" id="SCq-oW-CGL"/>
+                <constraint firstItem="pXV-Hl-xIH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Wjl-EU-jnd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MBG-Lc-Up1" secondAttribute="trailing" constant="40" id="cvY-Cu-CKt"/>
+                <constraint firstItem="0C3-xP-qzC" firstAttribute="top" secondItem="pXV-Hl-xIH" secondAttribute="bottom" constant="22" id="es7-6m-9WI"/>
+                <constraint firstItem="MBG-Lc-Up1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="mbo-W6-7mH"/>
+                <constraint firstItem="MBG-Lc-Up1" firstAttribute="top" secondItem="0C3-xP-qzC" secondAttribute="bottom" constant="50" id="s30-FQ-VcM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pXV-Hl-xIH" secondAttribute="trailing" constant="30" id="t34-c8-0rY"/>
+                <constraint firstItem="0C3-xP-qzC" firstAttribute="trailing" secondItem="pXV-Hl-xIH" secondAttribute="trailing" id="tSk-2q-uay"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

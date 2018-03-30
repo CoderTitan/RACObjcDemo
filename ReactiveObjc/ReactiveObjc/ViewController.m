@@ -8,107 +8,61 @@
 
 #import "ViewController.h"
 #import <ReactiveObjC.h>
+#import "SingleViewController.h"
+#import "SubjectViewController.h"
+#import "SequenceViewController.h"
+#import "RACHighViewController.h"
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *textField1;
-@property (weak, nonatomic) IBOutlet UITextField *textField2;
-@property (weak, nonatomic) IBOutlet UIButton *button1;
-@property (weak, nonatomic) IBOutlet UIButton *button2;
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *dataArr;
 @end
 
 @implementation ViewController
 
+- (NSMutableArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray arrayWithObjects:
+                    @"RACSingle",
+                    @"RACSubject",
+                    @"RACSequence",
+                    @"RAC的高级用法",
+                    nil];
+    }
+    return _dataArr;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self test2];
+    self.title = @"列表";
 }
 
-- (void)test2 {
-    //创建信号
-    RACSignal *single = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        //发送消息
-        [subscriber sendNext:@"a"];
-        [subscriber sendNext:@"b"];
-        //发送完成
-        [subscriber sendCompleted];
-        
-        //清空数据
-        return [RACDisposable disposableWithBlock:^{
-            //当订阅者被消耗的时候就会执行
-            //当订阅者发送完成,或者error的时候也会执行
-            NSLog(@"RACDisposable的block");
-        }];
-    }];
-    
-    //订阅信号
-    RACDisposable *disposable = [single subscribeNext:^(id  _Nullable x) {
-        NSLog(@"value = %@", x);
-    } error:^(NSError * _Nullable error) {
-        NSLog(@"error: %@", error);
-    } completed:^{
-        NSLog(@"completed");
-    }];
-    
-    //释放
-    [disposable dispose];
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArr.count;
 }
 
-- (void)test1 {
-    //创建信号 --> 订阅信号 (响应式变成思想: 只要信号一变化, 马上就会通知你)
-    
-    //创建信号
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        //发送信号变化
-        NSLog(@"RACSignal的block");
-        
-        //处理网络请求
-        
-        
-        //发送消息
-        [subscriber sendNext:@10];
-        //发送完成
-        [subscriber sendCompleted];
-        
-        //清空数据
-        return [RACDisposable disposableWithBlock:^{
-            //当订阅者被消耗的时候就会执行
-            //当订阅者发送完成,或者error的时候也会执行
-            NSLog(@"RACDisposable的block");
-        }];
-    }];
-    
-    
-    //订阅信号
-    /*
-     [signal subscribeNext:^(id  _Nullable x) {
-     //处理订阅的事件
-     }];
-     
-     [signal subscribeNext:^(id  _Nullable x) {
-     //处理订阅的事件
-     
-     } error:^(NSError * _Nullable error) {
-     //处理error的事件
-     
-     }];
-     */
-    
-    [signal subscribeNext:^(id  _Nullable x) {
-        //处理订阅的事件
-    } error:^(NSError * _Nullable error) {
-        //处理error的事件
-    } completed:^{
-        //处理订阅事件完成的操作
-    }];
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = self.dataArr[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSArray *vcs = [NSArray arrayWithObjects:
+                    [[SingleViewController alloc]init],
+                    [[SubjectViewController alloc]init],
+                    [[SequenceViewController alloc]init],
+                    [[RACHighViewController alloc]init],
+                    nil];
+    [self.navigationController pushViewController:vcs[indexPath.row] animated:true];
 }
-
 
 @end
